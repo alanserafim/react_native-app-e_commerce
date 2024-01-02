@@ -9,7 +9,7 @@ import { Feather } from 'react-native-vector-icons'
 import { produtos } from './produtos';
 import MaterialCommunityIcons from 'react-native-vector-icons/Feather';
 
-export default function Principal({navigation}) {
+export default function Principal({ navigation }) {
   const {
     quantidade,
     ultimosVistos,
@@ -29,15 +29,15 @@ export default function Principal({navigation}) {
     <View style={estilo.container}>
       <StatusBar />
       <View style={estilo.tituloArea}>
-        <Text style={estilo.titulo}>Olá, {usuario.nome}</Text>
+        <Text style={estilo.titulo}>Olá, {usuario?.nome}</Text>
         <View style={estilo.carrinhoArea}>
           <TouchableOpacity onPress={() => navigation.navigate('Resumo')}>
             <Feather name="shopping-cart" size={30} color="#fff" style={estilo.carrinhoIcon} />
           </TouchableOpacity>
           {quantidade > 0 &&
-          <View style={estilo.carrinhoQuantidadeArea}>
-            <Text style={estilo.carrinhoQuantidade}>{quantidade}</Text>  
-          </View>}
+            <View style={estilo.carrinhoQuantidadeArea}>
+              <Text style={estilo.carrinhoQuantidade}>{quantidade}</Text>
+            </View>}
           <TouchableOpacity onPress={() => navigation.navigate('Configurações')} style={estilo.iconArea} >
             <MaterialCommunityIcons name="settings" size={30} color="#fff" style={estilo.icon} />
           </TouchableOpacity>
@@ -47,7 +47,7 @@ export default function Principal({navigation}) {
       <FlatList
         data={produtos}
         keyExtractor={item => Math.random()}
-        renderItem={({ item }) => <Produto item={item} visualizado={true}/>}
+        renderItem={({ item }) => <Produto item={item} visualizado={true} />}
         style={estilo.lista}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={() =>
