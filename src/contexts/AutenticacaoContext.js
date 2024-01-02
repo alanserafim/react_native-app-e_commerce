@@ -6,9 +6,9 @@ export function AutenticacaoProvider({ children }) {
     const [usuario, setUsuario] = useState(null);
 
     async function login(email, senha){
-      if(email === 'andre@email.com' && senha === '123'){
+      if(email === 'alan@email.com' && senha === '12345'){
           setUsuario({
-              nome: 'André',
+              nome: 'Alan',
               email: email,
               telefone: '+55 (11) 99999-9999',
               endereco: 'Rua dos Bacanas, 10',
