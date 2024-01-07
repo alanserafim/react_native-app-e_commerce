@@ -1,16 +1,22 @@
 {
   "produtos": [
     {
-      "imagem": 20,
-      "texto": "Mesa chique",
-      "preco": 200,
+      "imagem": 19,
+      "texto": "Tenis bacana",
+      "preco": 100,
       "id": 1
     },
     {
-      "imagem": 22,
-      "texto": "Cadeira de trabalho",
-      "preco": 150,
+      "imagem": 20,
+      "texto": "Mesa chique",
+      "preco": 200,
       "id": 2
+    },
+    {
+      "imagem": 21,
+      "texto": "Camisa bonita",
+      "preco": 80,
+      "id": 3
     }
   ]
 }
